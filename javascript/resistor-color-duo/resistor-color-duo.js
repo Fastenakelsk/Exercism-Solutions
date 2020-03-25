@@ -4,6 +4,10 @@
 //
 const COLORS = ["black","brown","red","orange","yellow","green","blue","violet","grey","white"];
 
-export const decodedValue = ([x, y]) => {
-  return parseInt(`${COLORS.indexOf(x)}${COLORS.indexOf(y)}`);
+export const decodedValue = ([firstColor, secondColor]) => {
+  return colorToResistance(firstColor) * 10 + colorToResistance(secondColor);
 };
+
+function colorToResistance(color) {
+  return COLORS.indexOf(color);
+}
