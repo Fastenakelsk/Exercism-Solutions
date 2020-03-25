@@ -4,6 +4,6 @@
 //
 const COLORS = ["black","brown","red","orange","yellow","green","blue","violet","grey","white"];
 
-export const decodedValue = (resistors) => {
-  return parseInt(`${COLORS.indexOf(resistors[0])}${COLORS.indexOf(resistors[1])}`);
+export const decodedValue = ([x, y]) => {
+  return parseInt(`${COLORS.indexOf(x)}${COLORS.indexOf(y)}`);
 };
