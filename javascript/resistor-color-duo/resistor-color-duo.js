@@ -8,6 +8,6 @@ export const decodedValue = ([firstColor, secondColor]) => {
   return colorToResistance(firstColor) * 10 + colorToResistance(secondColor);
 };
 
-function colorToResistance(color) {
+const colorToResistance = (color) => {
   return COLORS.indexOf(color);
 }
